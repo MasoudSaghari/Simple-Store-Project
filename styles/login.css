@@ -1,0 +1,592 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  direction: rtl;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #3b82f6;
+}
+.login-box {
+  width: 60vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  place-items: center;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 2rem 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.login-box form .login-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+.login-box form .login-info p {
+  color: darkgray;
+}
+.login-box form .login-inpts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem 0 1rem;
+}
+.login-box form .login-inpts input {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+.login-box form .login-inpts input:focus {
+  box-shadow: 0 0 10px #3b82f6;
+  outline: none;
+}
+
+.rem-forgot {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.rem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.rem label,
+input {
+  cursor: pointer;
+}
+.forg a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+.forg a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+form .login-btn {
+  padding: 0.3rem 5rem 0.7rem;
+  border-radius: 30px;
+  border: none;
+  background-color: #3b82f6;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form .login-btn:hover {
+  background-color: #0062ff;
+  transform: translateY(-3px);
+}
+form .login-link {
+  color: #3b82f6;
+  text-decoration: none;
+}
+form .login-link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+.welcome {
+  background-color: #3b82f6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 4.5rem;
+}
+.welcome h3 {
+  color: white;
+  direction: rtl;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.welcome p {
+  color: white;
+  direction: rtl;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* RESPONESIVE */
+
+@media (max-width: 480px) {
+  .login-box {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 85vw;
+    height: 100%;
+  }
+  form {
+    padding: 1rem 2rem;
+  }
+  .login-box form .login-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+  }
+  .login-box form .login-info h1 {
+    font-size: 1.5rem;
+  }
+  .login-box form .login-info p {
+    color: gray;
+    font-size: 0.8rem;
+  }
+  .login-box form .login-inpts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem 0 1rem;
+  }
+  .login-box form .login-inpts input {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+  .login-box form .login-inpts input:focus {
+    box-shadow: 0 0 10px #3b82f6;
+    outline: none;
+  }
+
+  .rem-forgot {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .rem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  .rem label,
+  input {
+    cursor: pointer;
+  }
+  .forg a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+  }
+  .forg a:hover {
+    text-decoration: underline;
+    font-weight: 500;
+    transition: all 0.5s ease;
+  }
+
+  /* form .login-btn {
+    padding: 0.3rem 3rem 0.7rem;
+  } */
+  .welcome {
+    background-color: #3b82f6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2.5rem;
+  }
+  .welcome h3 {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .welcome p {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .login-box {
+    margin-top: 2rem;
+    width: 80vw;
+    height: 100%;
+  }
+  form {
+    padding: 1rem 1rem;
+  }
+  .login-box form .login-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+  }
+  .login-box form .login-info h1 {
+    font-size: 1.5rem;
+  }
+  .login-box form .login-info p {
+    color: gray;
+    font-size: 0.8rem;
+  }
+  .login-box form .login-inpts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem 0 1rem;
+  }
+  .login-box form .login-inpts input {
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+  .login-box form .login-inpts input:focus {
+    box-shadow: 0 0 10px #3b82f6;
+    outline: none;
+  }
+
+
+  .rem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: .8rem;
+  }
+  .rem label,
+  input {
+    cursor: pointer;
+  }
+  .forg a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    font-size: .8rem;
+  }
+
+  form .login-btn {
+    font-size: 1rem;
+    /* padding: 0.3rem 2rem 0.7rem; */
+  }
+  .welcome {
+    background-color: #3b82f6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2.5rem;
+  }
+  .welcome h3 {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .welcome p {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .login-box {
+    /* margin-top: 1rem; */
+    width: 75vw;
+    height: 100%;
+  }
+  form {
+    padding: 1rem 2rem;
+  }
+  .login-box form .login-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+  }
+  .login-box form .login-info h1 {
+    font-size: 1.5rem;
+  }
+  .login-box form .login-info p {
+    color: gray;
+    font-size: 0.8rem;
+  }
+  .login-box form .login-inpts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem 0 1rem;
+  }
+  .login-box form .login-inpts input {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+  .login-box form .login-inpts input:focus {
+    box-shadow: 0 0 10px #3b82f6;
+    outline: none;
+  }
+
+  .rem {
+
+    font-size: .8rem;
+  }
+  .rem label,
+  input {
+    cursor: pointer;
+  }
+  .forg a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    font-size: .8rem;
+  }
+
+  form .login-btn {
+    padding: 0.3rem 4rem 0.7rem;
+  }
+  .welcome {
+    background-color: #3b82f6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2.5rem;
+  }
+  .welcome h3 {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .welcome p {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .login-box {
+    /* margin-top: 2rem; */
+    width: 70vw;
+    height: 100%;
+  }
+  form {
+    padding: 4rem 3rem;
+  }
+  .login-box form .login-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+  }
+  .login-box form .login-info h1 {
+    font-size: 1.5rem;
+  }
+  .login-box form .login-info p {
+    color: gray;
+    font-size: 0.8rem;
+  }
+  .login-box form .login-inpts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem 0 1rem;
+  }
+  .login-box form .login-inpts input {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+  .login-box form .login-inpts input:focus {
+    box-shadow: 0 0 10px #3b82f6;
+    outline: none;
+  }
+  .rem {
+
+    font-size: 1rem;
+  }
+  .rem label,
+  input {
+    cursor: pointer;
+  }
+  .forg a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    font-size: 1rem;
+  }
+
+  form .login-btn {
+    padding: 0.3rem 4rem 0.7rem;
+  }
+  .welcome {
+    background-color: #3b82f6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2.5rem;
+  }
+  .welcome h3 {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .welcome p {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1441px) {
+  .login-box {
+    /* margin-top: 2rem; */
+    width: 50vw;
+    height: 100%;
+  }
+  form {
+    padding: 1rem 2rem;
+  }
+  .login-box form .login-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+  }
+  .login-box form .login-info h1 {
+    font-size: 1.5rem;
+  }
+  .login-box form .login-info p {
+    color: gray;
+    font-size: 0.8rem;
+  }
+  .login-box form .login-inpts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: 1rem 0 1rem;
+  }
+  .login-box form .login-inpts input {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+  .login-box form .login-inpts input:focus {
+    box-shadow: 0 0 10px #3b82f6;
+    outline: none;
+  }
+  .agreement {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .agreement a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .agreement a:hover {
+    text-decoration: underline;
+  }
+
+  form .login-btn {
+    padding: 0.3rem 4rem 0.7rem;
+  }
+  .welcome {
+    background-color: #3b82f6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2.5rem;
+  }
+  .welcome h3 {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .welcome p {
+    color: white;
+    direction: rtl;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
