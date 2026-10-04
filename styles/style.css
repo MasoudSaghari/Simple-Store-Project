@@ -879,6 +879,7 @@ footer{
   /* HEADER-SECTION */
   header {
     padding: 1rem 5rem;
+    height: 10dvh;
   }
 
   .logo h1 {
