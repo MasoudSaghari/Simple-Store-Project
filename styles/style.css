@@ -878,7 +878,7 @@ footer{
 @media (min-width: 481px) and (max-width: 768px) {
   /* HEADER-SECTION */
   header {
-    padding: 0 5rem;
+    padding: 1rem 5rem;
   }
 
   .logo h1 {
